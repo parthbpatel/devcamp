@@ -1,0 +1,121 @@
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .navbar {
+   background-color: rgba(251,248,245,0.98);
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+   font-size: 1.5rem;
+
+   .navbar-nav {
+     .nav-item {
+       margin-right: 1rem;
+
+       &:last-child {
+         margin-right: 0;
+       }
+     }
+
+     .nav-item a {
+       color: #283c46;
+       padding: 0.7rem;
+
+       &:hover {
+         background-color: #fff;
+         border-radius: 20px;
+       }
+     }
+
+     .nav-item.navbar-profile-icon {
+       height: 25px;
+       width: 25px;
+       border-radius: 50%;
+       background-color: #8067c3;
+       align-self: center;
+       display: flex;
+       align-content: center;
+       justify-content: center;
+
+       a {
+         text-align: center;
+         align-self: center;
+         color: #fff;
+
+         &:hover {
+           background-color: transparent;
+           border-radius: 0;
+         }
+       }
+     }
+   }
+ }
+
+ html {
+   font-size: 10px;
+ }
+
+ body {
+   color: #283c46;
+   background-color: #f5efe6;
+   line-height: 1.5;
+   margin-top: 0;
+   font-size: 1.7rem;
+ }
+
+ .project-card {
+   display: block;
+   color: #283c46;
+   background-color: #fff;
+   box-shadow: 0 1px 2px #aa9c84;
+   border-radius: 6px;
+   padding: 1.5rem;
+   height: 100%;
+ }
+
+ .home {
+   h3 {
+     color: #aa9c84;
+   }
+
+   .home-header {
+     margin-bottom: 3rem;
+   }
+ }
+
+ .project-col {
+   margin-bottom: 1.5rem;
+ }
+
+ .project-card {
+   display: block;
+   color: #283c46;
+   background-color: #fff;
+   box-shadow: 0 1px 2px #aa9c84;
+   border-radius: 6px;
+   padding: 1.5rem;
+   height: 100%;
+
+   &:hover {
+     text-decoration: none;
+     color: #283c46;
+   }
+
+   h4 {
+     font-weight: bold;
+     margin-bottom: 0.5rem;
+   }
+
+   p {
+     font-size: 1.2rem;
+   }
+ }
+
+ main.container {
+   margin-top: 4rem;
+ }
+
+ @media (min-width: 48em) {
+   .container {
+     max-width: 68rem;
+   }
+ }
