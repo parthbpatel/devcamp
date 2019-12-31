@@ -1,121 +1,154 @@
- // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
- @import "bootstrap-sprockets";
- @import "bootstrap";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
- .navbar {
-   background-color: rgba(251,248,245,0.98);
-   border-bottom: 1px solid rgba(0,0,0,0.1);
-   font-size: 1.5rem;
 
-   .navbar-nav {
-     .nav-item {
-       margin-right: 1rem;
+  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
 
-       &:last-child {
-         margin-right: 0;
-       }
-     }
+  .navbar {
+    background-color: rgba(251,248,245,0.98);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.5rem;
 
-     .nav-item a {
-       color: #283c46;
-       padding: 0.7rem;
+    .navbar-nav {
+      .nav-item {
+        margin-right: 1rem;
 
-       &:hover {
-         background-color: #fff;
-         border-radius: 20px;
-       }
-     }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
 
-     .nav-item.navbar-profile-icon {
-       height: 25px;
-       width: 25px;
-       border-radius: 50%;
-       background-color: #8067c3;
-       align-self: center;
-       display: flex;
-       align-content: center;
-       justify-content: center;
+      .nav-item a {
+        color: #283c46;
+        padding: 0.7rem;
 
-       a {
-         text-align: center;
-         align-self: center;
-         color: #fff;
+        &:hover {
+          background-color: #fff;
+          border-radius: 20px;
+        }
+      }
 
-         &:hover {
-           background-color: transparent;
-           border-radius: 0;
-         }
-       }
-     }
-   }
- }
+      .nav-item.navbar-profile-icon {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: #8067c3;
+        align-self: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
 
- html {
-   font-size: 10px;
- }
+        a {
+          text-align: center;
+          align-self: center;
+          color: #fff;
 
- body {
-   color: #283c46;
-   background-color: #f5efe6;
-   line-height: 1.5;
-   margin-top: 0;
-   font-size: 1.7rem;
- }
+          &:hover {
+            background-color: transparent;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
 
- .project-card {
-   display: block;
-   color: #283c46;
-   background-color: #fff;
-   box-shadow: 0 1px 2px #aa9c84;
-   border-radius: 6px;
-   padding: 1.5rem;
-   height: 100%;
- }
+  html {
+    font-size: 10px;
+  }
 
- .home {
-   h3 {
-     color: #aa9c84;
-   }
+  body {
+    color: #283c46;
+    background-color: #f5efe6;
+    line-height: 1.5;
+    margin-top: 0;
+    font-size: 1.7rem;
+  }
 
-   .home-header {
-     margin-bottom: 3rem;
-   }
- }
+  .project-card {
+    display: block;
+    color: #283c46;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #aa9c84;
+    border-radius: 6px;
+    padding: 1.5rem;
+    height: 100%;
+  }
 
- .project-col {
-   margin-bottom: 1.5rem;
- }
+  .home {
+    h3 {
+      color: #aa9c84;
+    }
 
- .project-card {
-   display: block;
-   color: #283c46;
-   background-color: #fff;
-   box-shadow: 0 1px 2px #aa9c84;
-   border-radius: 6px;
-   padding: 1.5rem;
-   height: 100%;
+    .home-header {
+      margin-bottom: 3rem;
+    }
+  }
 
-   &:hover {
-     text-decoration: none;
-     color: #283c46;
-   }
+  .project-col {
+    margin-bottom: 1.5rem;
+  }
 
-   h4 {
-     font-weight: bold;
-     margin-bottom: 0.5rem;
-   }
+  .project-card {
+    display: block;
+    color: #283c46;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #aa9c84;
+    border-radius: 6px;
+    padding: 1.5rem;
+    height: 100%;
 
-   p {
-     font-size: 1.2rem;
-   }
- }
+    &:hover {
+      text-decoration: none;
+      color: #283c46;
+    }
 
- main.container {
-   margin-top: 4rem;
- }
+    h4 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
 
- @media (min-width: 48em) {
-   .container {
-     max-width: 68rem;
-   }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  main.container {
+    margin-top: 4rem;
+  }
+
+  @media (min-width: 48em) {
+    .container {
+      max-width: 68rem;
+    }
+  }
+
+  .project-popover {
+    width: 220px;
+    position: absolute;
+    top: 3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    z-index: 1;
+    background-color: #fff;
+    padding: 1rem 1rem 2rem;
+  }
+
+ .is-hidden {
+   display: none;
  }
