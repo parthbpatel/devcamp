@@ -20,9 +20,15 @@ class ProjectController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def chat
+    @message = Message.new
+    @messages = Message.where project_id: params[:id]
+    @project = Project.find(params[:id])
+  end
+
   private
 
-  def project_params
-    params.require(:project).permit(:name, :description)
-  end
+    def project_params
+      params.require(:project).permit(:name, :description)
+    end
 end

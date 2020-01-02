@@ -11,6 +11,13 @@
 
   <body>
     <%= render "layouts/navbar.html" %>
+    <script>
+      <% if @project.id %>
+        window.projectId = "<%= @project.id %>";
+      <% else %>
+        window.projectId = null
+      <% end %>
+    </script>
 
     <%= yield %>
   </body>
