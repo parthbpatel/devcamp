@@ -25,6 +25,7 @@ document.addEventListener('turbolinks:load', function () {
   // Assign the elements we're intrerested in to variables
   const openProjectButton = document.getElementById('new-project-button')
   const projectPopover = document.getElementById('new-project-popover')
+  // debugger;
   const projectForm = document.getElementById('new-project-form')
   const projectName = document.getElementById('project-name-input')
 
@@ -58,6 +59,7 @@ document.addEventListener('turbolinks:load', function () {
     var errorNode = document.createElement('div')
     var errorTextNode = document.createTextNode('Name must not be blank')
     errorNode.classList.add('invalid-feedback')
+
     errorNode.appendChild(errorTextNode)
     // Add the error message node using this ugly line of code. Thanks StackOverflow!
     projectName.parentNode.insertBefore(errorNode, projectName.nextSibling)

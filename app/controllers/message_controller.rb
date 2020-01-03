@@ -3,7 +3,9 @@ class MessageController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      format.js { @message }
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
