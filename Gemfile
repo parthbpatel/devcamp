@@ -21,6 +21,7 @@ gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'rails-ujs', '~> 0.1.0'
 gem 'pry', '~> 0.12.2'
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -55,7 +56,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
