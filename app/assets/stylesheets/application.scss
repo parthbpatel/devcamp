@@ -101,9 +101,14 @@
     height: 100%;
   }
 
+  h1 {
+    color: #fff;
+  }
+
   .home {
     h3 {
-      color: #000;
+      color: #fff;
+      font-size: 30px;
     }
 
     .home-header {
@@ -232,6 +237,8 @@
   min-height: 80vh;
   display: flex;
   flex-direction: column;
+  background: transparent;
+  border: 2px solid white;
 
   .chat-form {
     margin-top: auto;
