@@ -17,7 +17,10 @@
         <a class="nav-link" href="#">Reports</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blogs</a>
+        <%= link_to "Read Blogs", blogs_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create Blog", new_blog_path, class: "nav-link"%>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Find</a>
