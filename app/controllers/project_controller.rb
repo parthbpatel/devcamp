@@ -4,6 +4,10 @@ class ProjectController < ApplicationController
     @project = Project.new
   end
 
+  def new
+    @project = Project.new
+  end
+
   def create
     @project = Project.new(project_params)
 
@@ -22,13 +26,13 @@ class ProjectController < ApplicationController
 
   def chat
     @message = Message.new
-    @messages = Message.where project_id: params[:id]
+    @messages = Message.order(created_at: :asc).where(project_id: params[:id])
     @project = Project.find(params[:id])
   end
 
   private
 
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, :user_id)
     end
 end

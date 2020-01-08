@@ -5,7 +5,9 @@
       <div id="new-project-popover" class="project-popover is-hidden">
         <%= form_with(model: @project, id: 'new-project-form') do |f| %>
           <div class="form-group">
-            <%= f.text_field :name, class: "form-control", id: "project-name-input", placeholder: "Name this project", autoFocus: true %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= f.text_field :name, class: "form-control", id: "project-name-input", placeholder: "Name this project", autoFocus: true %><br>
+            <%= f.text_field :description, class: "form-control", id: "project-description-input", placeholder: "Describe It", autoFocus: true %>
           </div>
           <%= f.submit "Save", class: "btn btn-success" %>
           <button id="cancel-project-popover" class="btn btn-secondary">Cancel</button>
