@@ -18,6 +18,11 @@
   // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
   @import "bootstrap-sprockets";
   @import "bootstrap";
+  @import "social-share-button";
+
+  .field {
+    color: #fff;
+  }
 
   #webback {
     background-image: url(/assets/webback.jpg);
@@ -135,8 +140,8 @@
 
     &:hover {
       text-decoration: none;
-      color: #283c46;
-      background-color: #FF5733;
+      // color: #283c46;
+      // background-color: #FF5733;
     }
 
     h4 {
@@ -195,8 +200,8 @@
 
    &:hover {
      text-decoration: none;
-     color: #283c46;
-     background-color: #FF5733;
+     // color: #283c46;
+     // background-color: #FF5733;
    }
 
    h4 {

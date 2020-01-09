@@ -4,7 +4,7 @@ class MessageController < ApplicationController
 
     if @message.save
       respond_to do |format|
-        format.js
+        format.js {render inline: "location.reload();" }
       end
     end
   end

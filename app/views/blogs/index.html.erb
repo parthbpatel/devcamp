@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 <center><h1>Blogs</h1></center>
 
-  <% @blogs.each do |blog| %>
+<% @blogs.each do |blog| %>
   <div class="blog-card">
     <h3><u><b><%= link_to blog.title, blog %></b></u></h3><h5>Created at: <%= blog.created_at %></h5>
 
     <%= blog.content %><br><br>
     <%= link_to 'Show', blog, class: 'btn btn-primary' %> |
     <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-primary' %> |
-    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %><hr>
+    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+    <%= social_share_button_tag(blog.title, url: blog_path(blog)) %>
+    <hr>
   </div>
-  <% end %>
+<% end %>
