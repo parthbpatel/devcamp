@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :projects
   has_many :messages, through: :projects, dependent: :destroy
-  has_many :blogs       
+  has_many :blogs
 end

@@ -11,10 +11,13 @@
         <a class="nav-link" href="#">Latest activity</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Chat</a>
+        <a class="nav-link" href="#">Reports</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Reports</a>
+        <%= link_to "All To Do", todos_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "To Do", new_todo_path, class: "nav-link"%>
       </li>
       <li class="nav-item">
         <%= link_to "Read Blogs", blogs_path, class: "nav-link"%>
@@ -33,7 +36,7 @@
         <%= link_to "Login", new_user_session_path, class: "nav-link"%>
       </li>
       <li class="nav-item">
-        <%= link_to "Signup", projects_path, class: "nav-link"%>
+        <%= link_to "Signup", new_user_registration_path, class: "nav-link"%>
       </li>
     </ul>
   <% end %>

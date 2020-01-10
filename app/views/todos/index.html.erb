@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="textColor">
+<center><h1>Todos</h1></center>
+<%= link_to 'New Todo', new_todo_path, class: 'btn btn-primary' %>
+<br><br>
+<table class="table" id="tableback">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Details</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.details %></td>
+        <td><%= link_to 'Show', todo, class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Trash', todo, method: :delete, data: { confirm: 'Are you sure?', class: 'btn btn-primary' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+</div>
