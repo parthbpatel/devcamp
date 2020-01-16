@@ -3,7 +3,7 @@
 
 <% @blogs.each do |blog| %>
   <div class="blog-card">
-    <h3><u><b><%= link_to blog.title, blog %></b></u></h3><h5>Created at: <%= blog.created_at %></h5>
+    <h3><u><b><%= link_to blog.title, blog %></b></u></h3><h5>Created at: <%= blog.created_at %></h5><h5>Blogger: <%= blog.user.email %></h5>
 
     <%= blog.content %><br><br>
     <%= link_to 'Show', blog, class: 'btn btn-primary' %> |
