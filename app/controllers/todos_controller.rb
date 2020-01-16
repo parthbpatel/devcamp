@@ -3,7 +3,6 @@ class TodosController < ApplicationController
 
   def index
     @todos = Todo.all
-    @user = User.find_by params[:id]
   end
 
   def show
