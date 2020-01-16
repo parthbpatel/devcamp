@@ -21,6 +21,12 @@
     <%= form.text_area :details %>
   </div>
 
+  <div class="field">
+    <%= form.label :users %>
+    <%= form.collection_select :user_id, User.order(:email),:id,:email, include_blank: true %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

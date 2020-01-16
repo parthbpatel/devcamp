@@ -3,6 +3,7 @@ class TodosController < ApplicationController
 
   def index
     @todos = Todo.all
+    @user = User.find_by params[:id]
   end
 
   def show
@@ -55,6 +56,6 @@ class TodosController < ApplicationController
     end
 
     def todo_params
-      params.require(:todo).permit(:title, :details)
+      params.require(:todo).permit(:title, :details, :user_id)
     end
 end
