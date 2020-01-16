@@ -1,27 +1,29 @@
-<div class="blogger">
-<%= form_with(model: blog, local: true) do |form| %>
-  <% if blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+<div class="login-style textColor">
+  <div class="blogger">
+  <%= form_with(model: blog, local: true) do |form| %>
+    <% if blog.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
-      <ul>
-        <% blog.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% blog.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-row">
+      <div class="form-group col-mr-12 col-md-12">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+
+        <%= form.label :content %>
+        <%= form.text_area :content, class: 'form-control' %>
+
+        <%= form.hidden_field :user_id, value: current_user.id %>
+      </div>
     </div>
+        <%= form.submit class: 'btn btn-primary' %>
   <% end %>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <%= form.label :title %>
-      <%= form.text_field :title, class: 'form-control' %>
-
-      <%= form.label :content %>
-      <%= form.text_area :content, class: 'form-control' %>
-
-      <%= form.hidden_field :user_id, value: current_user.id %>
-    </div>
   </div>
-      <%= form.submit %>
-<% end %>
 </div>

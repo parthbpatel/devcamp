@@ -1,6 +1,8 @@
+<center>
 <h1>Editing Blog</h1>
 
-<%= render 'form', blog: @blog %>
+<%= render 'form', blog: @blog %><br>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'Show', @blog, class: 'btn btn-primary' %> |
+<%= link_to 'Back', blogs_path, class: 'btn btn-primary' %>
+</center>

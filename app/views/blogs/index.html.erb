@@ -9,7 +9,7 @@
     <%= link_to 'Show', blog, class: 'btn btn-primary' %> |
     <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-primary' %> |
     <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-    <%= social_share_button_tag(blog.title, url: blog_path(blog)) %>
     <hr>
+    <%= social_share_button_tag(url: blog_path(blog)) %>
   </div>
 <% end %>

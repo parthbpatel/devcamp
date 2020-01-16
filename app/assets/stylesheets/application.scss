@@ -173,7 +173,7 @@
     margin-top: 4rem;
   }
 
-  @media (min-width: 48em) {
+  @media (min-width: 50em) {
     .container {
       max-width: 68rem;
     }
@@ -329,6 +329,13 @@
   margin: auto;
   width: 50%;
   border: 3px solid #000000;
+  padding: 10px;
+}
+
+.login-style {
+  margin: auto;
+  width: 30%;
+  border: 3px solid #fff;
   padding: 10px;
 }
 

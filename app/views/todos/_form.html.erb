@@ -1,33 +1,37 @@
-<%= form_with(model: todo, local: true) do |form| %>
-  <% if todo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+<div class="login-style">
+  <center>
+  <%= form_with(model: todo, local: true) do |form| %>
+    <% if todo.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
 
-      <ul>
-        <% todo.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% todo.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :details %><br>
+      <%= form.text_area :details %>
+    </div>
+
+    <div class="field">
+      <%= form.label :users %><br>
+      <%= form.collection_select :user_id, User.order(:email),:id,:email, include_blank: true %><br>
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit class: 'btn btn-primary' %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :details %>
-    <%= form.text_area :details %>
-  </div>
-
-  <div class="field">
-    <%= form.label :users %>
-    <%= form.collection_select :user_id, User.order(:email),:id,:email, include_blank: true %>
-  </div>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  </center>
+</div>
