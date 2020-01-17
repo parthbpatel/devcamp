@@ -154,10 +154,17 @@
     height: 100%;
 
     &:hover {
-      text-decoration: none;
-      // color: #283c46;
-      // background-color: #FF5733;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
     }
+
+    // .shrink:hover
+    // {
+    //         -webkit-transform: scale(0.8);
+    //         -ms-transform: scale(0.8);
+    //         transform: scale(0.8);
+    // }
 
     h4 {
       font-weight: bold;
