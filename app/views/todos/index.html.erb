@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
 <div class="textColor">
-<center><h1>Todos</h1></center>
-<%= link_to 'New Todo', new_todo_path, class: 'btn btn-primary' %>
-<br><br>
+<!-- <h1>Todos</h1> -->
+<center><%= link_to 'New Todo', new_todo_path, class: 'btn btn-primary' %></center><hr>
 <table class="table" id="tableback">
   <thead>
     <tr>
@@ -27,8 +25,6 @@
       <% end %>
     <% end %>
   </tbody>
+  <center><%= will_paginate @todos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %></center>
 </table>
-
-<br>
-
 </div>

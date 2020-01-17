@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
   def index
-    @todos = Todo.all
+    @todos = Todo.order('created_at DESC').paginate(page: params[:page], per_page: 6)
   end
 
   def show
