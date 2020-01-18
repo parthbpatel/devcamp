@@ -4,6 +4,7 @@
 <table class="table" id="tableback">
   <thead>
     <tr>
+      <th scope="col">Sr. No</th>
       <th scope="col">Title</th>
       <th scope="col">Details</th>
       <th scope="col">Allocated To</th>
@@ -12,9 +13,11 @@
   </thead>
 
   <tbody>
-    <% @todos.each do |todo| %>
+    <% count = ((params[:page] || 1).to_i - 1) * 6
+     @todos.each_with_index do |todo, index| %>
       <% unless todo.user.nil? %>
         <tr>
+          <td><%= count + index + 1 %></td>
           <td><%= todo.title %></td>
           <td><%= todo.details %></td>
           <td><%= todo.user.email %></td>
@@ -24,7 +27,7 @@
         </tr>
       <% end %>
     <% end %>
+    <center><%= will_paginate @todos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %></center>
   </tbody>
-  <center><%= will_paginate @todos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %></center>
 </table>
 </div>
