@@ -30,6 +30,10 @@ class ProjectController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def model_info
+    render partial: 'model_info'
+  end
+
   private
 
     def project_params
