@@ -64,6 +64,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
+    bootstrap-popover-rails (0.1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -97,6 +98,8 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.11.3)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.1)
@@ -107,6 +110,8 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -129,6 +134,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.1)
+    popper_js (1.16.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -242,14 +248,18 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap-popover-rails
   bootstrap-sass (~> 3.4, >= 3.4.1)
   byebug
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.1)
+  font-awesome-rails (~> 4.7, >= 4.7.0.5)
   jbuilder (~> 2.7)
   jquery-rails (~> 4.3, >= 4.3.5)
+  jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  popper_js (~> 1.16)
   pry (~> 0.12.2)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
@@ -272,4 +282,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

@@ -31,7 +31,7 @@ class ProjectController < ApplicationController
   end
 
   def model_info
-    render partial: 'model_info'
+    render 'model_info', layout: '/layouts/model_details'
   end
 
   private

@@ -15,11 +15,15 @@ require("channels")
 // const image//= require_tree .s = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 //= require rails-ujs
+//= require popper
+//= require jquery
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap
-//= require jquery
 //= require turbolinks
-//= require_tree .
+//= require bootstrap/bootstrap-rails-tooltip
+//= require bootstrap/bootstrap-rails-popover
+//= require model_details
 
 // We have to make sure turbolinks is loaded before we work our magic, feel free to experiment without!
 document.addEventListener('turbolinks:load', function () {
