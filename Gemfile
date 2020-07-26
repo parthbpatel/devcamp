@@ -30,6 +30,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'jquery-ui-rails'
 gem 'popper_js', '~> 1.16'
 gem 'bootstrap-popover-rails'
+gem 'impressionist'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

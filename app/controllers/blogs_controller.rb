@@ -1,11 +1,13 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  impressionist action: :show
 
   def index
     @blogs = Blog.all
   end
 
   def show
+    impressionist(@blog)
   end
 
   def new
