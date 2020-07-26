@@ -21,7 +21,6 @@ gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'rails-ujs', '~> 0.1.0'
 gem 'pry', '~> 0.12.2'
-gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'social-share-button', '~> 1.2', '>= 1.2.1'
 gem 'will_paginate', '~> 3.2', '>= 3.2.1'
@@ -45,6 +44,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pg', '>= 0.18', '< 2.0'
 end
 
 group :development do
@@ -65,6 +65,7 @@ group :test do
 end
 
 group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
