@@ -12,6 +12,6 @@
     <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-primary' %> |
     <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
     <hr>
-    <%= social_share_button_tag(url: blog_path(blog)) %>
+    <%= social_share_button_tag((blog.title), allow_sites: %w(twitter facebook)) %>
   </div>
 <% end %>
