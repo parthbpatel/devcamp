@@ -4,7 +4,8 @@
 <% @blogs.each do |blog| %>
   <div class="blog-card">
     <h3><u><b><%= link_to blog.title, blog %></b></u></h3>
-    <h5>Created at: <%= blog.created_at %></h5>
+    <h5>Views: <%= blog.impressionist_count(filter: :ip_address) %></h5>
+    <h5>Created at: <%= pretty_datetime(blog.created_at) %></h5>
     <h5>Blogger: <%= blog.user.email %></h5>
 
     <%= blog.content %><br><br>

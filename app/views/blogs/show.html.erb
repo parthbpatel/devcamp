@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="blog-card">
-  <b><h3>Title: <%= @blog.title %></h3></b><h4>Views: <%= @blog.impressionist_count(filter: :ip_address) %></h4><h5>Created at: <%= @blog.created_at %></h5>
+  <b><h3>Title: <%= @blog.title %></h3></b><h4>Views: <%= @blog.impressionist_count(filter: :ip_address) %></h4><h5>Created at: <%= pretty_datetime(@blog.created_at) %></h5>
 <hr>
   <%= @blog.content %>
 <br><br>
